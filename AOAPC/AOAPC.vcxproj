@@ -142,12 +142,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ATypicalHomework.cpp" />
     <ClCompile Include="DigitGenerator.cpp" />
     <ClCompile Include="CircularSequence.cpp" />
     <ClCompile Include="FloatingPointNumber.cpp" />
+    <ClCompile Include="HangmanJudge.cpp" />
+    <ClCompile Include="IPNetworks.cpp" />
+    <ClCompile Include="MessageDecoding.cpp" />
     <ClCompile Include="Palindromes.cpp" />
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="TexQuotes.cpp" />
+    <ClCompile Include="TheDoleQueue.cpp" />
     <ClCompile Include="WERTYU.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
