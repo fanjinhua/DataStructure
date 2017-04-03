@@ -51,5 +51,11 @@
     <ClCompile Include="IPNetworks.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="IPNetworks2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MorseMismatches.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
