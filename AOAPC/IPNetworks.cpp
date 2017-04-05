@@ -1,4 +1,4 @@
-/**/
+/** /
 // only sample passed.
 #include <stdio.h>	
 #include <string.h>
