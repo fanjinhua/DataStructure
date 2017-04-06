@@ -142,6 +142,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\DataStructure\uva10474.cpp" />
     <ClCompile Include="ATypicalHomework.cpp" />
     <ClCompile Include="DigitGenerator.cpp" />
     <ClCompile Include="CircularSequence.cpp" />
@@ -155,6 +156,10 @@
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="TexQuotes.cpp" />
     <ClCompile Include="TheDoleQueue.cpp" />
+    <ClCompile Include="uva101.cpp" />
+    <ClCompile Include="uva10815.cpp" />
+    <ClCompile Include="uva12096.cpp" />
+    <ClCompile Include="uva156.cpp" />
     <ClCompile Include="WERTYU.cpp" />
     <ClCompile Include="Xiangqi-uva1589.cpp" />
   </ItemGroup>

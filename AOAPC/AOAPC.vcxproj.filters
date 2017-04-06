@@ -60,5 +60,20 @@
     <ClCompile Include="Xiangqi-uva1589.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\DataStructure\uva10474.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uva101.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uva10815.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uva156.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uva12096.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
