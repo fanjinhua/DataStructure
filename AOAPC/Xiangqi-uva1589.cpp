@@ -1,4 +1,4 @@
-/**/
+/** /
 #include<cstdio>
 #include<cstring>
 using namespace std;
@@ -75,8 +75,8 @@ int check(int r, int c)
 int main()
 {
 	char s[5];
-	int n, r, c, x, y;
-	while (scanf("%d%d%d", &n, &r, &c), n || r || c)
+	int n, row, column, x, y;
+	while (scanf("%d%d%d", &n, &row, &column), n || row || column)
 	{
 		memset(brd, 0, sizeof(brd));
 		cr[0] = cc[0] = cr[1] = cc[1] = 0;
@@ -94,7 +94,7 @@ int main()
 
 		int cnt = 0;
 		for (int i = 0; i < 4; ++i)
-			cnt += check(r + dx[i], c + dy[i]);
+			cnt += check(row + dx[i], column + dy[i]);
 		if (cnt < 4) puts("NO");
 		else puts("YES");
 	}
