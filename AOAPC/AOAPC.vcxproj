@@ -144,6 +144,7 @@
   <ItemGroup>
     <ClCompile Include="..\DataStructure\uva10474.cpp" />
     <ClCompile Include="ATypicalHomework.cpp" />
+    <ClCompile Include="BigInteger.cpp" />
     <ClCompile Include="DigitGenerator.cpp" />
     <ClCompile Include="CircularSequence.cpp" />
     <ClCompile Include="FloatingPointNumber.cpp" />
@@ -159,7 +160,11 @@
     <ClCompile Include="uva101.cpp" />
     <ClCompile Include="uva10815.cpp" />
     <ClCompile Include="uva12096.cpp" />
+    <ClCompile Include="uva136.cpp" />
     <ClCompile Include="uva156.cpp" />
+    <ClCompile Include="uva1592.cpp" />
+    <ClCompile Include="uva400.cpp" />
+    <ClCompile Include="uva540.cpp" />
     <ClCompile Include="WERTYU.cpp" />
     <ClCompile Include="Xiangqi-uva1589.cpp" />
   </ItemGroup>

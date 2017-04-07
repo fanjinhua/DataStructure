@@ -75,5 +75,20 @@
     <ClCompile Include="uva12096.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="uva540.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uva136.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BigInteger.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uva400.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uva1592.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
