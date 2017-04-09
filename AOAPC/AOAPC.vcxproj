@@ -159,6 +159,7 @@
     <ClCompile Include="TheDoleQueue.cpp" />
     <ClCompile Include="uva101.cpp" />
     <ClCompile Include="uva10815.cpp" />
+    <ClCompile Include="uva10935.cpp" />
     <ClCompile Include="uva12096.cpp" />
     <ClCompile Include="uva136.cpp" />
     <ClCompile Include="uva156.cpp" />
