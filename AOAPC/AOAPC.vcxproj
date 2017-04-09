@@ -164,10 +164,14 @@
     <ClCompile Include="uva156.cpp" />
     <ClCompile Include="uva1592.cpp" />
     <ClCompile Include="uva1593.cpp" />
+    <ClCompile Include="uva1594.cpp" />
     <ClCompile Include="uva400.cpp" />
     <ClCompile Include="uva540.cpp" />
     <ClCompile Include="WERTYU.cpp" />
     <ClCompile Include="Xiangqi-uva1589.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="in" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
