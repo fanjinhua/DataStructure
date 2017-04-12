@@ -169,6 +169,7 @@
     <ClCompile Include="uva1593.cpp" />
     <ClCompile Include="uva1594.cpp" />
     <ClCompile Include="uva1595.cpp" />
+    <ClCompile Include="uva1596.cpp" />
     <ClCompile Include="uva400.cpp" />
     <ClCompile Include="uva540.cpp" />
     <ClCompile Include="WERTYU.cpp" />
