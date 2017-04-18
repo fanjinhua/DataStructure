@@ -7,12 +7,12 @@
 #include <vector>
 #include <map>
 using namespace std;
-
 int n, t_assign, t_print, t_lock, t_unlock, t_end, quantum;
 deque<int> ready;
 queue<int> blocked;
 map<string, int> vars;
 vector<string> prog;
+vector<int> ip;
 
 void run(int pid)
 {
@@ -50,10 +50,18 @@ int main()
 	ifstream fin("in");
 	fin >> n >> t_assign >> t_print >> t_lock >> t_unlock >> t_end >> quantum;
 	string stat;
+	int line = 1;
+	ip.push_back(1);
 	while (getline(fin, stat))
 	{
-		
+		prog.push_back(stat);
+		if (stat == "end")
+			ip.push_back(line + 1);
+		line++;
 	}
+	ip.pop_back();
+	for (int i = 0; i < n; ++i)
+		ready.push_back(i);
 
 	return 0;
 }

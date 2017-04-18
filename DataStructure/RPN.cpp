@@ -9,14 +9,14 @@ string shunting_yard(const string& intfix)
 	string postfix;
 	stack<char> ops;
 	ops.push('#');
-	std::map<char, int> pred = { {'#', 0}, {'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}, {'(', 3}};
+	std::map<char, int> pred = { {'#', 0}, {')', 0}, {'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}, {'(', 3} };
 
 	int index = 0;
 	while (index < intfix.size())
 	{
-		if (isdigit(intfix[index]))
+		if (isalpha(intfix[index]))
 		{
-			while (isdigit(intfix[index]))
+			while (isalpha(intfix[index]))
 				postfix += intfix[index++];
 			postfix += ' ';
 		}
