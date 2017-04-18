@@ -1,75 +1,76 @@
 #include <stack>
 #include <string>
-#include <unordered_map>
+#include <map>
 #include <cassert>
 using std::string; using std::stack;
 
-string shunting_yard(const string& infix_expr)
+string shunting_yard(const string& intfix)
 {
-	string postfix_expr;
+	string postfix;
 	stack<char> ops;
 	ops.push('#');
-	std::unordered_map<char, int> precedence = { {'#', 0}, 	{')', 1}, {'+', 2}, \
-												{'-', 2}, {'*', 3}, {'/', 3}, {'(', 4},};
+	std::map<char, int> pred = { {'#', 0}, {'+', 1}, {'-', 1}, {'*', 2}, {'/', 2}, {'(', 3}};
 
 	int index = 0;
-	while (index < infix_expr.size())
+	while (index < intfix.size())
 	{
-		if (isdigit(infix_expr[index]))
+		if (isdigit(intfix[index]))
 		{
-			while (isdigit(infix_expr[index]))
-				postfix_expr += infix_expr[index++];
-			postfix_expr += ' ';
+			while (isdigit(intfix[index]))
+				postfix += intfix[index++];
+			postfix += ' ';
 		}
 		else
 		{
-			while (precedence[infix_expr[index]] <= precedence[ops.top()] && ops.top() != '(')
+			while (pred[ops.top()] >= pred[intfix[index]])
 			{
-				postfix_expr += ops.top();
-				postfix_expr += ' ';
+				if (ops.top() == '(')
+				{
+					if (intfix[index] == ')')
+						ops.pop();
+					break;
+				}
+				postfix += ops.top();
+				postfix += ' ';
 				ops.pop();
 			}
-			if (infix_expr[index] == ')')
-				ops.pop();
-			else
-				ops.push(infix_expr[index]);
+			if (intfix[index] != ')')
+				ops.push(intfix[index]);
 			index++;
 		}
 	}
 	while (ops.size() > 1)
 	{
-		postfix_expr += ops.top(); 
-		postfix_expr += ' ';
+		postfix += ops.top(); 
+		postfix += ' ';
 		ops.pop();
-
 	}
-
-	return postfix_expr;
+	return postfix;
 }
 
-int rpn(const string& postfix_expr)
+int rpn(const string& postfix)
 {
 	stack<int> nums;
 	stack<int> ops;
 	int number;
 
-	for (int index = 0; index < postfix_expr.size(); ++index)
+	for (int index = 0; index < postfix.size(); ++index)
 	{
-		if (isdigit(postfix_expr[index]))
+		if (isdigit(postfix[index]))
 		{	
 			number = 0;
-			while (isdigit(postfix_expr[index]))
-				number = number * 10 + (postfix_expr[index++] - '0');
+			while (isdigit(postfix[index]))
+				number = number * 10 + (postfix[index++] - '0');
 			nums.push(number);
 		}
-		if (postfix_expr[index] == ' ')
+		if (postfix[index] == ' ')
 			continue;
 
 		assert(nums.size() > 1);
 		int num1 = nums.top(); nums.pop();
 		int num2 = nums.top(); nums.pop();
 		
-		switch (postfix_expr[index])
+		switch (postfix[index])
 		{
 		case '+':
 			nums.push(num2 + num1);
