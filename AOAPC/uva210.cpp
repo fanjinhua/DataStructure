@@ -1,4 +1,4 @@
-/**/
+/** /
 #include <iostream>
 #include <sstream>
 #include <fstream>
@@ -8,6 +8,7 @@
 #include <map>
 using namespace std;
 int n, t_assign, t_print, t_lock, t_unlock, t_end, quantum;
+bool locked;
 deque<int> ready;
 queue<int> blocked;
 map<string, int> vars;
@@ -16,53 +17,98 @@ vector<int> ip;
 
 void run(int pid)
 {
-	vector<string> tokens;
-	stringstream ss(stat);
-	string buf;
-	while (ss >> buf)
-		tokens.push_back(buf);
-	if (tokens.size() == 3)
+	int quan = quantum;
+	while (quan > 0)
 	{
-		int constant;
-		ss << tokens.back();
-		ss >> constant;
-		vars[tokens.front()] = constant;
+		vector<string> tokens;
+		stringstream ss(prog[ip[pid]]);
+		string buf;
+		while (ss >> buf)
+			tokens.push_back(buf);
+		if (tokens.size() == 3)  // assign
+		{
+			int constant = 0;
+			buf = tokens.back();
+			for (int i = 0; i < buf.size(); ++i)
+				constant = constant * 10 + (buf[i] - '0');
+			vars[tokens.front()] = constant;
+			quan -= t_assign;
+		}
+		else if (tokens.size() == 2)  // print
+		{
+			cout << pid + 1 << ": " << vars[tokens.back()] << "\n";
+			quan -= t_print;
+		}
+		else if (tokens.size() == 1)
+		{
+			if (tokens.front() == "end")
+			{
+				quan -= t_end;
+				return;
+			}
+			else if (tokens.front() == "lock")
+			{
+				if (locked)
+				{
+					blocked.push(pid);
+					return;
+				}
+				locked = true;
+				quan -= t_lock;
+			}
+			else if (tokens.front() == "unlock")
+			{
+				locked = false;
+				if (!blocked.empty())
+				{
+					int pid2 = blocked.front();
+					blocked.pop();
+					ready.push_front(pid2);
+				}
+				quan -= t_unlock;
+			}
+		}
+		ip[pid]++;
 	}
-	else if (tokens.size() == 2)
-	{
-		cout << vars[tokens.back()];
-	}
-	else if (tokens.size() == 1)
-	{
-		if (tokens.front() == "end")
-			;
-		else if (tokens.front() == "lock")
-			;
-		else if (tokens.front() == "unlock")
-			;
-
-	}
+	ready.push_back(pid);
 }
 
 int main()
 {
-	
-	ifstream fin("in");
-	fin >> n >> t_assign >> t_print >> t_lock >> t_unlock >> t_end >> quantum;
-	string stat;
-	int line = 1;
-	ip.push_back(1);
-	while (getline(fin, stat))
+	int T;
+	//ifstream fin("in");
+	cin >> T;
+	while (T--)
 	{
-		prog.push_back(stat);
-		if (stat == "end")
-			ip.push_back(line + 1);
-		line++;
-	}
-	ip.pop_back();
-	for (int i = 0; i < n; ++i)
-		ready.push_back(i);
+		prog.clear();
+		ip.clear();
+		vars.clear();
+		
+		cin >> n >> t_assign >> t_print >> t_lock >> t_unlock >> t_end >> quantum;
+		string stat;
+		int line = 0;
+		ip.push_back(line);
+		while (getline(cin, stat))
+		{
+			prog.push_back(stat);
+			if (stat == "end")
+				ip.push_back(line + 1);
+			line++;
+		}
+		ip.pop_back();
+		for (int i = 0; i < n; ++i)
+			ready.push_back(i);
 
+		locked = false;
+		while (!ready.empty())
+		{
+			int pid = ready.front();
+			ready.pop_front();
+			run(pid);
+		}
+		if (T)
+			cout << "\n";
+	}
 	return 0;
 }
 /**/
