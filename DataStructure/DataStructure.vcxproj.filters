@@ -38,5 +38,14 @@
     <ClInclude Include="deceleration.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="binary_tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="node_impl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
