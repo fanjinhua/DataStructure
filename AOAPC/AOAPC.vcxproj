@@ -176,6 +176,7 @@
     <ClCompile Include="uva11988.cpp" />
     <ClCompile Include="uva514.cpp" />
     <ClCompile Include="uva540.cpp" />
+    <ClCompile Include="uva673.cpp" />
     <ClCompile Include="WERTYU.cpp" />
     <ClCompile Include="Xiangqi-uva1589.cpp" />
   </ItemGroup>
