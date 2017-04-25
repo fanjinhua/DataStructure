@@ -152,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binary_tree.h" />
+    <ClInclude Include="bst.h" />
     <ClInclude Include="deceleration.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="node_impl.h" />
