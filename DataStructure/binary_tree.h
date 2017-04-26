@@ -26,7 +26,7 @@ public:
 		return x->right_;
 	}
 protected:
-	BinNode root_;
+	Node<T>* root_;
 	int size_;
 	virtual int update_height(BinNode x)
 	{

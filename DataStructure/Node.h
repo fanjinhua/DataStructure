@@ -14,7 +14,8 @@ public:
 
 	Node* insert_as_left(const T& data) { return left_ = new Node(data, this); }
 	Node* insert_as_right(const T& data) { return right_ = new Node(data, this); }
-	
+	Node* succ();
+
 	template<typename VST> void trav_pre(VST& visit)
 	{
 		switch (rand() % 2)
@@ -47,6 +48,7 @@ public:
 		}
 	}
 	template<typename VST> void trav_level(VST& visit);
+
 	T data_;
 	Node* parent_;
 	Node* left_;
@@ -167,4 +169,23 @@ inline void Node<T>::trav_level(VST & visit)
 		if (x->left_) q.push(x->left_);
 		if (x->right_) q.push(x->right_);
 	}
+}
+
+template<typename T>
+inline Node<T> * Node<T>::succ()
+{
+	Node<T>* p = this;
+	if (p->right_)
+	{
+		p = p->right_;
+		while (p->left_)
+			p = p->left_;
+	}
+	else
+	{
+		while (p->parent_ && p == p->parent_->right_)
+			p = p->parent_;
+		p = p->parent_;
+	}
+	return p;
 }
