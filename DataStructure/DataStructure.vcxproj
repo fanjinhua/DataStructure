@@ -151,11 +151,13 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="avl.h" />
     <ClInclude Include="binary_tree.h" />
     <ClInclude Include="bst.h" />
     <ClInclude Include="deceleration.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="node_impl.h" />
+    <ClInclude Include="node_macro.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

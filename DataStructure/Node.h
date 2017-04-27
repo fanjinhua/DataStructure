@@ -2,7 +2,7 @@
 #include <stack>
 #include <queue>
 #define stature(p) ((p) ? (p)->height_ : -1)
-typedef enum { RB_RED, RB_BLACK } RBColort;
+#include "node_macro.h"
 
 template<typename T>
 class Node

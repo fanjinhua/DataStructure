@@ -50,5 +50,11 @@
     <ClInclude Include="bst.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="avl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="node_macro.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
