@@ -7,6 +7,8 @@ class AVL : public BST<T>
 public:
 	Node<T>* insert(const T& key);
 	bool remove(const T& key);
+protected:
+	
 };
 
 template<typename T>

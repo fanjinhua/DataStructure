@@ -1,4 +1,5 @@
 #pragma once
+#include <algorithm>
 
 #define IsRoot(x) (!((x)->parent_))
 #define Isleft_hild(x) (!IsRoot(x) && ( (x) == (x)->parent_->left_ ))

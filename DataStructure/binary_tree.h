@@ -1,6 +1,5 @@
 #pragma once 
 #include "Node.h"
-#include <algorithm>
 #define BinNode Node<T>*;
 
 template<typename T>
