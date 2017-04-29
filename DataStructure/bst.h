@@ -5,6 +5,7 @@ template<typename T>
 class BST : public BinTree<T>
 {
 public:
+	BST(): BinTree<T>(), hot_(nullptr) {}
 	virtual Node<T>* search(const T&);
 	virtual Node<T>* insert(const T&);
 	virtual bool remove(const T&);
@@ -20,13 +21,10 @@ template<typename T>
 inline Node<T>* BST<T>::search(const T &key)
 {
 	Node<T>* p = this->root_;
-	while (!p && p->data_ != key)
+	while (p && p->data_ != key)
 	{
-		hot_ = p;
-		if (key < p->data_)
-			p = p->left_;
-		else
-			p = p->right_;
+		hot_ = p; // 先记录当前（非空）节点，再深入
+		p = (key < p->data_) ? p->left_ : p->right_;
 	}
 	return p;
 }
@@ -34,7 +32,7 @@ inline Node<T>* BST<T>::search(const T &key)
 template<typename T>
 inline Node<T>* BST<T>::insert(const T &key)
 {
-	Node<T>* x = search(key);
+	Node<T>*& x = search(key);
 	if (x) return x;
 	x = new Node<T>(key, hot_);
 	size_++;
@@ -58,11 +56,14 @@ inline Node<T>* BST<T>::connect34(Node<T>* a, Node<T>* b, Node<T>* c, \
 	Node<T>* T0, Node<T>* T1, Node<T>* T2, Node<T>* T3)
 {
 	a->left_ = T0; if (T0) T0->parent_ = a;
-	a->right_ = T1; if (T1) T1->parent_ = a; updateHeight(a);
+	a->right_ = T1; if (T1) T1->parent_ = a; 
+	HeightUpdated(a);
 	c->left_ = T2; if (T2) T2->parent_ = c; 
-	c->right_ = T3; if (T3) T3->parent_ = c; updateHeight(c);
+	c->right_ = T3; if (T3) T3->parent_ = c; 
+	HeightUpdated(c);
 	b->left_ = a; a->parent_ = b;
-	b->right_ = c; c->parent_ = b; updateHeight(b);
+	b->right_ = c; c->parent_ = b; 
+	HeightUpdated(b);
 	return b;//该子树新的根节点
 }
 

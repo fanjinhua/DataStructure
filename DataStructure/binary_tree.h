@@ -6,7 +6,7 @@ template<typename T>
 class BinTree
 {
 public:
-	BinTree() {}
+	BinTree(): root_(nullptr), size_(0) {}
 
 	int size() const { return size_; }
 	void updata_height_above(Node<T>* x) { while (x) { update_height(x); x = x->parent_; } }
