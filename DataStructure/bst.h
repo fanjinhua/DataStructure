@@ -15,6 +15,7 @@ protected:
 		Node<T>*, Node<T>*, Node<T>*,
 		Node<T>*, Node<T>*, Node<T>*, Node<T>*);
 	Node<T>* rotate_at(Node<T>* x); //对x及其父亲、祖父做统一旋转调整
+	Node<T>* remove_at(Node<T>*& x);
 };
 
 template<typename T>
@@ -43,9 +44,9 @@ inline Node<T>* BST<T>::insert(const T &key)
 template<typename T>
 inline bool BST<T>::remove(const T &)
 {
-	Node<T>* x = search(key);
+	Node<T>*& x = search(key);
 	if (!x) return false;
-	remove_at(x, hot_); 
+	remove_at(x); 
 	size_--;
 	this->updata_height_above(hot_);
 	return true;
@@ -97,4 +98,26 @@ inline Node<T>* BST<T>::rotate_at(Node<T>* v) // grandparent - parent - vertex
 			return this->connect34(g, p, v, g->left_, p->left_, v->left_, v->right_);
 		}
 	}
+}
+
+template<typename T>
+inline Node<T>* BST<T>::remove_at(Node<T>*& x)
+{
+	Node<T>* w = x; //实际被摘除的节点，初值同x
+	Node<T>* succ = nullptr; //实际被删除节点的接替者
+	if (!HasLChild(x)) //若*x的左子树为空，则可
+		succ = x = x->right_; //直接将*x替换为其右子树
+	else if (!HasRChild(x)) //若右子树为空，则可
+		succ = x = x->left_; //对称地处理——注意：此时succ != NULL
+	else  //若左右子树均存在，则选择x的直接后继作为实际被摘除节点，为此需要
+	{
+		w = w->succ(); //（在右子树中）找到*x的直接后继*w
+		std::swap(x->data_, w->data_); 
+		Node<T>* u = w->parent_;
+		((u == x) ? u->right_ : u->left_) = succ = w->right_; //隔离节点*w
+	}
+	hot_ = w->parent_; //记录实际被删除节点的父亲
+	if (succ) succ->parent_ = hot_; //并将被删除节点的接替者与hot相联
+	delete w; // release(w->data); release(w);
+	return succ; //释放被摘除节点，返回接替者
 }

@@ -5,10 +5,10 @@
 #define IsLChild(x) (!IsRoot(x) && ( (x) == (x)->parent_->left_ ))
 #define IsRChild(x) (!IsRoot(x) && ( (x) == (x)->parent_->right_ ))
 #define HasParent(x) (!IsRoot(x))
-#define Hasleft_hild(x) ( (x)->left_ )
-#define Hasright_hild(x) ( (x)->right_ )
-#define HasChild(x) ( Hasleft_hild(x) || Hasright_hild(x) ) //至少拥有一个孩子
-#define HasBothChild(x) ( Hasleft_hild(x) && Hasright_hild(x) ) //同时拥有两个孩子
+#define HasLChild(x) ( (x)->left_ )
+#define HasRChild(x) ( (x)->right_ )
+#define HasChild(x) ( HasLChild(x) || HasRChild(x) ) //至少拥有一个孩子
+#define HasBothChild(x) ( HasLChild(x) && HasRChild(x) ) //同时拥有两个孩子
 #define IsLeaf(x) ( ! HasChild(x) )
 
 #define sibling(p) /*兄弟*/ \
