@@ -155,6 +155,8 @@
     <ClInclude Include="binary_tree.h" />
     <ClInclude Include="bst.h" />
     <ClInclude Include="deceleration.h" />
+    <ClInclude Include="graph.h" />
+    <ClInclude Include="graph_matrix.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="node_impl.h" />
     <ClInclude Include="node_macro.h" />
