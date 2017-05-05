@@ -135,6 +135,9 @@
     <ClCompile Include="uva548.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="uva839.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="in">

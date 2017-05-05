@@ -180,6 +180,7 @@
     <ClCompile Include="uva540.cpp" />
     <ClCompile Include="uva548.cpp" />
     <ClCompile Include="uva673.cpp" />
+    <ClCompile Include="uva839.cpp" />
     <ClCompile Include="WERTYU.cpp" />
     <ClCompile Include="Xiangqi-uva1589.cpp" />
   </ItemGroup>
