@@ -182,6 +182,7 @@
     <ClCompile Include="uva548.cpp" />
     <ClCompile Include="uva673.cpp" />
     <ClCompile Include="uva699.cpp" />
+    <ClCompile Include="uva536.cpp" />
     <ClCompile Include="uva839.cpp" />
     <ClCompile Include="WERTYU.cpp" />
     <ClCompile Include="Xiangqi-uva1589.cpp" />
