@@ -158,6 +158,7 @@
     <ClCompile Include="TexQuotes.cpp" />
     <ClCompile Include="TheDoleQueue.cpp" />
     <ClCompile Include="uva101.cpp" />
+    <ClCompile Include="uva10305.cpp" />
     <ClCompile Include="uva10391.cpp" />
     <ClCompile Include="uva10763.cpp" />
     <ClCompile Include="uva10815.cpp" />
