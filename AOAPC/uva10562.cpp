@@ -8,6 +8,16 @@ const int maxn = 200 + 10;
 int n;
 char buf[maxn][maxn];
 
+void dfs(int r, int c)
+{
+	printf("%c(", buf[r][c]);
+	if (r + 1 < n && buf[r + 1][c] == '|')
+	{
+		int i = c;
+
+	}
+}
+
 void solve()
 {
 	n = 0;
@@ -23,8 +33,13 @@ void solve()
 	if (n)
 	{
 		for (int i = 0; i < strlen(buf[0]); i++)
-
+			if (buf[0][i] != ' ')
+			{
+				dfs(0, i);
+				break;
+			}
 	}
+	printf(")\n");
 }
 
 int main()
