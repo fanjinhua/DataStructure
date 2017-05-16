@@ -1,4 +1,4 @@
-/**/
+/** /
 #include <cstdio>
 #include <cctype>
 #include <cstring>
@@ -14,8 +14,13 @@ void dfs(int r, int c)
 	if (r + 1 < n && buf[r + 1][c] == '|')
 	{
 		int i = c;
-
+		while (i - 1 >= 0 && buf[r + 2][i - 1] == '-') i--;
+		while (buf[r + 2][i] == '-' && buf[r + 3][i] != '\0') {
+			if (!isspace(buf[r + 3][i])) dfs(r + 3, i); //fgets¶ÁÈëµÄ"\n"Ò²Âú×ãisspace( )
+			i++;
+		}
 	}
+	printf(")");
 }
 
 void solve()
