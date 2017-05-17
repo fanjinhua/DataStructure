@@ -165,10 +165,19 @@
     <ClCompile Include="uva10562.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="uva712.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uva439.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="in">
       <Filter>资源文件</Filter>
+    </None>
+    <None Include="uva1599.cpp">
+      <Filter>源文件</Filter>
     </None>
   </ItemGroup>
 </Project>

@@ -180,6 +180,7 @@
     <ClCompile Include="uva297.cpp" />
     <ClCompile Include="uva400.cpp" />
     <ClCompile Include="uva11988.cpp" />
+    <ClCompile Include="uva439.cpp" />
     <ClCompile Include="uva514.cpp" />
     <ClCompile Include="uva540.cpp" />
     <ClCompile Include="uva548.cpp" />
@@ -187,6 +188,7 @@
     <ClCompile Include="uva673.cpp" />
     <ClCompile Include="uva699.cpp" />
     <ClCompile Include="uva536.cpp" />
+    <ClCompile Include="uva712.cpp" />
     <ClCompile Include="uva816.cpp" />
     <ClCompile Include="uva839.cpp" />
     <ClCompile Include="uva1103.cpp" />
@@ -195,6 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="in" />
+    <None Include="uva1599.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
