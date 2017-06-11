@@ -1,89 +1,61 @@
 /**/
-#include <iostream>
-#include <string>
+#include <cstdio>
+#include <cstring>
 #include <queue>
-#include <vector>
-#include <fstream>
-#include <set>
-#include <algorithm>
+
 using namespace std;
 int dr[] = { -1, -2, -2, -1, 1, 2,  2,  1 };
-int dc[] = { -2, -1,  1,  2, 2, 1, -1, -2 };
+int dc[] = {-2, -1,  1,  2, 2, 1, -1, -2 };
 
-struct Vertex
+struct node
 {
-	Vertex() = default;
-	Vertex(int r, int c) : r(r), c(c) {}
-	Vertex& operator=(const Vertex& v)
-	{
-		r = v.r;
-		c = v.c;
-		return *this;
-	}
-	bool operator==(const Vertex& v)
-	{
-		return r == v.r && c == v.c;
-	}
-	bool operator<(const Vertex& v)
-	{
-		return r < v.r;
-	}
-	int r, c;
+	int x, y;
+	int steps;
+}a, nex;
 
-};
+int mp[13][13];
+int ans;
+char s[10];
 
-Vertex src, dest;
-vector<Vertex> label;
+int mx[] = { 0, -2, -1,  1,  2, 2, 1, -1, -2 };
+int my[] = { 0, -1, -2, -2, -1, 1, 2,  2,  1 };
 
-#define LEGAL(r, c) ((r) >= 0 && (r) <= 8 && (c) >= 0 && (c) <= 8)
-
-vector<Vertex> next(Vertex u)
+int BFS()
 {
-	int r = u.r, c = u.c;
-	vector<Vertex> nbs;
-	for (int i = 0; i < 8; ++i)
-		if (LEGAL(r + dr[i], c + dc[i]))
-			nbs.push_back(Vertex(r + dr[i], c + dc[i]));
-
-	return nbs;
-}
-
-int bfs()
-{
-	queue<Vertex> Q;
-	Q.push(src);
-	int steps = -1;
-	if (src == dest)
-		return 0;
-	while (!Q.empty())
+	memset(mp, 0, sizeof(mp));
+	queue<node> q;
+	a.x = s[0] - 'a' + 1;
+	a.y = s[1] - '0';
+	a.steps = 0;
+	q.push(a);
+	while (!q.empty())
 	{
-		Vertex u = Q.front(); Q.pop();
-		for (Vertex v : next(u))
+		nex = q.front();
+		q.pop();
+		if (nex.x == s[3] - 'a' + 1 && nex.y == s[4] - '0')
+			return nex.steps;
+		for (int i = 1; i < 9; ++i)
 		{
-			if (std::find(label.begin(), label.end(), v) == label.end())
+			int x = nex.x + mx[i];
+			int y = nex.y + my[i];
+			if (x > 0 && x < 9 && y > 0 && y < 9 && !mp[x][y])
 			{
-				if (v == dest)
-					return steps;
-				label.push_back(v);
-				Q.push(v);
+				mp[x][y] = 1;
+				a.x = x;
+				a.y = y;
+				a.steps = nex.steps + 1;
+				q.push(a);
 			}
 		}
-		steps++;
 	}
-	return -1;
 }
 
 int main()
 {
-	string a, b;
-	ifstream fin("in");
-	while (fin >> a >> b)
-	{
-		src.r = a[1] - '0', src.c = b[0] - 'a' + 1;
-		dest.r = b[1] - '0', dest.c = b[0] - 'a' + 1;
-		cout << "To get from " << a << " to " << b << " takes " << \
-			bfs() << " knight moves." << endl;
-	}
+	FILE* fin = fopen("in","r");
+	
+	while (fgets(s, 10, fin) != NULL)
+		printf("To get from %c%c to %c%c takes %d knight moves.\n", s[0], s[1], s[3], s[4], BFS());
 	return 0;
 }
 
