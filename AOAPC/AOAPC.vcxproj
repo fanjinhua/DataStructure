@@ -176,6 +176,7 @@
     <ClCompile Include="uva1594.cpp" />
     <ClCompile Include="uva1595.cpp" />
     <ClCompile Include="uva1596.cpp" />
+    <ClCompile Include="uva1600.cpp" />
     <ClCompile Include="uva210.cpp" />
     <ClCompile Include="uva297.cpp" />
     <ClCompile Include="uva400.cpp" />
