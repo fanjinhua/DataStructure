@@ -154,6 +154,7 @@
     <ClCompile Include="MessageDecoding.cpp" />
     <ClCompile Include="MorseMismatches.cpp" />
     <ClCompile Include="Palindromes.cpp" />
+    <ClCompile Include="permutation.cpp" />
     <ClCompile Include="Score.cpp" />
     <ClCompile Include="TexQuotes.cpp" />
     <ClCompile Include="TheDoleQueue.cpp" />
