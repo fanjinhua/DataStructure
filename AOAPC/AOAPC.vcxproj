@@ -172,6 +172,7 @@
     <ClCompile Include="uva12166.cpp" />
     <ClCompile Include="uva122.cpp" />
     <ClCompile Include="uva12657.cpp" />
+    <ClCompile Include="uva129.cpp" />
     <ClCompile Include="uva136.cpp" />
     <ClCompile Include="uva156.cpp" />
     <ClCompile Include="uva1592.cpp" />
@@ -186,6 +187,7 @@
     <ClCompile Include="uva11988.cpp" />
     <ClCompile Include="uva439.cpp" />
     <ClCompile Include="uva514.cpp" />
+    <ClCompile Include="uva524.cpp" />
     <ClCompile Include="uva540.cpp" />
     <ClCompile Include="uva548.cpp" />
     <ClCompile Include="uva572.cpp" />

@@ -183,6 +183,12 @@
     <ClCompile Include="permutation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="uva524.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="uva129.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="in">
