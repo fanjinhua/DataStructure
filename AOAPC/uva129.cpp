@@ -1,13 +1,18 @@
-/**/
+/** /
 #include <iostream>
+using std::cout;
+using std::endl;
 int n, L, cnt;
 int S[100];
 
 int dfs(int cur)
 {
-	if (++cnt == n)
+	if (cnt++ == n)
 	{
-
+		for (int i = 0; i < cur; ++i)
+			cout << static_cast<char>('A' + S[i]);
+		cout << endl;
+		return 0;
 	}
 	for (int i = 0; i < L; ++i)
 	{
@@ -37,8 +42,10 @@ int dfs(int cur)
 
 int main()
 {
-	while (std::cin >> n >> L && n > 0)
+	//while (std::cin >> n >> L && n > 0)
 	{
+		n = 7;
+		L = 3;
 		cnt = 0;
 		dfs(0);
 	}

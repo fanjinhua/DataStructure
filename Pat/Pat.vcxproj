@@ -19,10 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{26CB80AB-2D3D-4E78-A79C-2FF9DEB43433}</ProjectGuid>
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{0E4B11FE-AF22-4ACE-BA8C-3702B479F6B9}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>AOAPC</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <RootNamespace>Pat</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -91,7 +92,6 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -104,7 +104,6 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -121,7 +120,6 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -138,73 +136,10 @@
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\DataStructure\uva10474.cpp" />
-    <ClCompile Include="ATypicalHomework.cpp" />
-    <ClCompile Include="BigInteger.cpp" />
-    <ClCompile Include="DigitGenerator.cpp" />
-    <ClCompile Include="CircularSequence.cpp" />
-    <ClCompile Include="FloatingPointNumber.cpp" />
-    <ClCompile Include="HangmanJudge.cpp" />
-    <ClCompile Include="IPNetworks.cpp" />
-    <ClCompile Include="IPNetworks2.cpp" />
-    <ClCompile Include="MessageDecoding.cpp" />
-    <ClCompile Include="MorseMismatches.cpp" />
-    <ClCompile Include="Palindromes.cpp" />
-    <ClCompile Include="permutation.cpp" />
-    <ClCompile Include="Score.cpp" />
-    <ClCompile Include="TexQuotes.cpp" />
-    <ClCompile Include="TheDoleQueue.cpp" />
-    <ClCompile Include="uva101.cpp" />
-    <ClCompile Include="uva10129.cpp" />
-    <ClCompile Include="uva10305.cpp" />
-    <ClCompile Include="uva10391.cpp" />
-    <ClCompile Include="uva10410.cpp" />
-    <ClCompile Include="uva10562.cpp" />
-    <ClCompile Include="uva10763.cpp" />
-    <ClCompile Include="uva10815.cpp" />
-    <ClCompile Include="uva10935.cpp" />
-    <ClCompile Include="uva12096.cpp" />
-    <ClCompile Include="uva12100.cpp" />
-    <ClCompile Include="uva12166.cpp" />
-    <ClCompile Include="uva122.cpp" />
-    <ClCompile Include="uva12657.cpp" />
-    <ClCompile Include="uva129.cpp" />
-    <ClCompile Include="uva136.cpp" />
-    <ClCompile Include="uva140.cpp" />
-    <ClCompile Include="uva156.cpp" />
-    <ClCompile Include="uva1592.cpp" />
-    <ClCompile Include="uva1593.cpp" />
-    <ClCompile Include="uva1594.cpp" />
-    <ClCompile Include="uva1595.cpp" />
-    <ClCompile Include="uva1596.cpp" />
-    <ClCompile Include="uva1600.cpp" />
-    <ClCompile Include="uva210.cpp" />
-    <ClCompile Include="uva297.cpp" />
-    <ClCompile Include="uva400.cpp" />
-    <ClCompile Include="uva11988.cpp" />
-    <ClCompile Include="uva439.cpp" />
-    <ClCompile Include="uva514.cpp" />
-    <ClCompile Include="uva524.cpp" />
-    <ClCompile Include="uva540.cpp" />
-    <ClCompile Include="uva548.cpp" />
-    <ClCompile Include="uva572.cpp" />
-    <ClCompile Include="uva673.cpp" />
-    <ClCompile Include="uva699.cpp" />
-    <ClCompile Include="uva536.cpp" />
-    <ClCompile Include="uva712.cpp" />
-    <ClCompile Include="uva816.cpp" />
-    <ClCompile Include="uva839.cpp" />
-    <ClCompile Include="uva1103.cpp" />
-    <ClCompile Include="WERTYU.cpp" />
-    <ClCompile Include="Xiangqi-uva1589.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="in" />
-    <None Include="uva1599.cpp" />
+    <ClCompile Include="pat1001.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,6 +15,7 @@ int main()
 	} while (std::next_permutation(p, p + n));
 	return 0;
 }
+
 #include <iostream>
 void print_permutation(int n, int* A, int cur)
 {

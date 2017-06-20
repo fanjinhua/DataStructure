@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DataStructure", "DataStructure\DataStructure.vcxproj", "{5A1AD5D5-B4EB-4968-9C7A-1985FC5E0517}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TsinghuaOj", "TsinghuaOj\TsinghuaOj.vcxproj", "{D88B477B-5030-42EA-A371-7A17721E8743}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AOAPC", "AOAPC\AOAPC.vcxproj", "{26CB80AB-2D3D-4E78-A79C-2FF9DEB43433}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pat", "Pat\Pat.vcxproj", "{0E4B11FE-AF22-4ACE-BA8C-3702B479F6B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,14 @@ Global
 		{26CB80AB-2D3D-4E78-A79C-2FF9DEB43433}.Release|x64.Build.0 = Release|x64
 		{26CB80AB-2D3D-4E78-A79C-2FF9DEB43433}.Release|x86.ActiveCfg = Release|Win32
 		{26CB80AB-2D3D-4E78-A79C-2FF9DEB43433}.Release|x86.Build.0 = Release|Win32
+		{0E4B11FE-AF22-4ACE-BA8C-3702B479F6B9}.Debug|x64.ActiveCfg = Debug|x64
+		{0E4B11FE-AF22-4ACE-BA8C-3702B479F6B9}.Debug|x64.Build.0 = Debug|x64
+		{0E4B11FE-AF22-4ACE-BA8C-3702B479F6B9}.Debug|x86.ActiveCfg = Debug|Win32
+		{0E4B11FE-AF22-4ACE-BA8C-3702B479F6B9}.Debug|x86.Build.0 = Debug|Win32
+		{0E4B11FE-AF22-4ACE-BA8C-3702B479F6B9}.Release|x64.ActiveCfg = Release|x64
+		{0E4B11FE-AF22-4ACE-BA8C-3702B479F6B9}.Release|x64.Build.0 = Release|x64
+		{0E4B11FE-AF22-4ACE-BA8C-3702B479F6B9}.Release|x86.ActiveCfg = Release|Win32
+		{0E4B11FE-AF22-4ACE-BA8C-3702B479F6B9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
