@@ -18,5 +18,13 @@
     <ClCompile Include="pat1001.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pat1003.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="patin">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

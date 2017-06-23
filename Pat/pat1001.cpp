@@ -1,3 +1,4 @@
+/** /
 #include <iostream>
 #include <stack>
 
@@ -6,6 +7,11 @@ int main()
 	int a, b;
 	std::cin >> a >> b;
 	int sum = a + b;
+	if (sum == 0)
+	{
+		std::cout << 0;
+		return 0;
+	}
 	std::stack<int> s;
 	int neg = (sum < 0) ? 1 : 0;
 	sum = (sum < 0) ? -sum : sum;
@@ -16,7 +22,7 @@ int main()
 	}
 	if (neg)
 		std::cout << "-";
-	while (1)
+	while (!s.empty())
 	{
 		std::cout << s.top();
 		s.pop();
@@ -28,3 +34,4 @@ int main()
 	std::cout << std::endl;
 	return 0;
 }
+/**/
